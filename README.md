@@ -21,21 +21,29 @@
 
 ```
 <你的工作目录>/
-├── .mcp.json                       # playwright-proxy MCP 配置（默认代理端口 24304、数据不落盘）
+├── CLAUDE.md                        # 工作规则、标准流程、SRC 边界（主流程唯一入口）
+├── .mcp.json                        # playwright-proxy + cheatengine MCP 配置
+├── knowledge/                       # 字典 / payload / 漏洞库（按需参考）
 └── .claude/
-    ├── agents/                     # 配套子代理
-    │   ├── pentest-vuln-miner.md   #   漏洞挖掘子代理（逐 URL 逐参数挖掘，产出漏洞矩阵与报告）
-    │   └── pentest-bypass-miner.md #   专项绕过子代理（对被防护信号穷尽多族绕过）
+    ├── agents/                      # 配套子代理
+    │   ├── pentest-vuln-miner.md    #   漏洞挖掘子代理（逐 URL 逐参数挖掘，产出漏洞矩阵与报告）
+    │   └── pentest-bypass-miner.md  #   专项绕过子代理（对被防护信号穷尽多族绕过）
+    ├── hooks/                       # 会话钩子（安全上下文注入、工具前后置处理）
+    ├── rules/                       # 通用规则（安全研究背景）
     └── skills/
-        └── pentest-windftsy/       # 主技能
-            ├── SKILL.md            #   技能主流程与工作规范
-            ├── references/         #   各阶段规范、数据结构、质量门禁、漏洞清单等
-            ├── scripts/            #   数据处理与质量门禁脚本（Python）
-            │   └── proxy/          #   记录型 HTTP/HTTPS 代理（基于 mitmproxy）
-            └── assets/templates/   #   项目配置模板
+        ├── pentest-windftsy/        # 主技能（攻击面测绘 → 威胁建模 → 漏洞挖掘 → 收敛 → 报告）
+        │   ├── SKILL.md             #   技能主流程与工作规范
+        │   ├── references/          #   阶段规范、数据结构、质量门禁、SRC 策略、漏洞链等
+        │   ├── scripts/             #   数据处理与质量门禁脚本（Python）
+        │   │   └── proxy/           #   记录型 HTTP/HTTPS 代理（基于 mitmproxy）
+        │   └── assets/templates/    #   项目配置模板
+        └── s-*/                     # 45 个专项漏洞技能，按漏洞类型按需读取
+                                     #   （SQLi / XSS / SSRF / 反序列化 / LLM 安全 / web3 / 移动端…）
 ```
 
 > 运行产生的项目数据默认落在工作目录下的 `pentest-data/{project-id}/`（本仓库不含示例数据）。
+>
+> 本地另有 `.claude/security-sources/`（AboutSecurity / hack-skills 第三方资源）、`tools/`、`agent-security-skill-hub/`，均为第三方或独立 git 仓库，不随本仓库分发（见 `.gitignore`）。
 
 ---
 
