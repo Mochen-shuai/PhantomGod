@@ -1,0 +1,18 @@
+# 运行时数据（含真实测试账号、代理日志、报告、base64 导出等敏感信息）
+pentest-data/
+
+# Playwright MCP 运行时日志
+.playwright-mcp/
+
+# Python 生成物
+__pycache__/
+*.pyc
+*.pyo
+
+# 本地敏感配置（可能含 API key / MCP 密钥）
+.claude/settings.local.json
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.log
