@@ -16,3 +16,10 @@ __pycache__/
 .DS_Store
 Thumbs.db
 *.log
+
+# 第三方安全资源（AboutSecurity / hack-skills，可重新获取，约 52M）
+.claude/security-sources/
+
+# 嵌套 git 仓库（独立版本控制，不并入主仓库）
+agent-security-skill-hub/
+tools/

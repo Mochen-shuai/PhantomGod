@@ -1,0 +1,30 @@
+{
+    "mcpServers":  {
+                       "playwright-proxy":  {
+                                                "type":  "stdio",
+                                                "command":  "cmd",
+                                                "args":  [
+                                                             "/c",
+                                                             "npx",
+                                                             "-y",
+                                                             "@playwright/mcp@0.0.79",
+                                                             "--isolated",
+                                                             "--proxy-server",
+                                                             "http://127.0.0.1:24304"
+                                                         ],
+                                                "env":  {
+
+                                                        }
+                                            },
+                       "cheatengine":  {
+                                           "type":  "stdio",
+                                           "command":  "python",
+                                           "args":  [
+                                                        "D:\\claude code\\Deepseek\\tools\\cheatengine-mcp-bridge\\MCP_Server\\mcp_cheatengine.py"
+                                                    ],
+                                           "env":  {
+                                                       "CE_MCP_TIMEOUT":  "30"
+                                                   }
+                                       }
+                   }
+}

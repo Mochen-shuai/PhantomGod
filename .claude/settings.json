@@ -1,0 +1,66 @@
+{
+    "project":  {
+                    "name":  "SRC Bounty Hunter",
+                    "description":  "AI-driven bug bounty hunting system for Chinese SRC platforms"
+                },
+    "include_patterns":  [
+                             "./CLAUDE.md",
+                             "./.claude/agents/pentest-*.md",
+                             "./.claude/skills/pentest-windftsy/SKILL.md",
+                             "./.claude/skills/pentest-windftsy/references/**/*"
+                         ],
+    "skill_directory":  "./.claude/skills",
+    "permissions":  {
+                        "allow":  [
+                                      "Bash(grep:*)",
+                                      "Bash(cat:*)",
+                                      "Bash(head:*)",
+                                      "Bash(find:*)",
+                                      "Bash(wc:*)",
+                                      "Bash(ls:*)",
+                                      "WebSearch",
+                                      "WebFetch"
+                                  ],
+                        "deny":  [
+                                     "Bash(rm:*)",
+                                     "Bash(sudo:*)",
+                                     "Bash(shutdown:*)",
+                                     "Bash(mkfs:*)",
+                                     "Bash(dd:*)",
+                                     "Bash(reboot:*)",
+                                     "Bash(format:*)"
+                                 ]
+                    },
+    "hooks":  {
+                  "UserPromptSubmit":  [
+                                           {
+                                               "hooks":  [
+                                                             {
+                                                                 "type":  "command",
+                                                                 "command":  "python \"d:/claude code/Deepseek/.claude/hooks/security-context-hook.py\""
+                                                             }
+                                                         ]
+                                           }
+                                       ],
+                  "PreToolUse":  [
+                                     {
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python \"d:/claude code/Deepseek/.claude/hooks/pre_tool_use.py\""
+                                                       }
+                                                   ]
+                                     }
+                                 ],
+                  "PostToolUse":  [
+                                      {
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python \"d:/claude code/Deepseek/.claude/hooks/post_tool_use.py\""
+                                                        }
+                                                    ]
+                                      }
+                                  ]
+              }
+}
