@@ -103,6 +103,8 @@ SRC 模式必须设置有效 `policy_profile`。厂商规则来自 `references/s
 
 最终报告只纳入符合策略的 `submit`。`chain_only`、`hold`、`not_reportable` 不进入正式漏洞详情。
 
+`chain_only` 的洞按 `references/chain-map.md` 找升级链转为 `submit`：`register_report.py` 登记时自动附带 `chain_hint` 升级提示写入 `vuln-reports.json`；`build_report.py` 出报告时自动列「5.1 链式候选升级建议」章节。
+
 若 `src-cn-bounty-manual.md`、厂商 `src-policies/*.json`、用户当次工作守则存在冲突，按更严格者执行；厂商公告和用户明确授权边界优先于通用手册。
 
 ## 可选参考
@@ -110,5 +112,6 @@ SRC 模式必须设置有效 `policy_profile`。厂商规则来自 `references/s
 - 根目录 `knowledge/`：旧知识库、payload、字典、漏洞库，按需读取。
 - `.claude/skills/s-*`：专项漏洞 Skill，按漏洞类型读取。
 - `scripts/cvss31-calculator.js` 已吸收到 Skill 内，可在 enterprise/国外平台报告中按需使用。
+- `scripts/pattern_db.py`：跨项目漏洞模式库（JSONL + 去重 + tech_stack 重叠检索），待数据积累后启用；`vuln_class` 用 coverage-registry 短代码（如 `AUTHZ`/`SSRF`）。
 
 不要把旧知识库内容大段复制进提示词。需要长期复用的内容，应迁入 `pentest-windftsy/references/` 或脚本配置。
