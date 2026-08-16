@@ -142,9 +142,12 @@ def classify_llm(prompt_text: str) -> dict | None:
 # Keyword classifier (fallback)
 # ---------------------------------------------------------------------------
 
+# 显式目标信号：明确的 http(s) URL，或 目标:/target:/域名:/domain: 标记后跟内容。
+# 不再用宽泛的「域名样式」匹配，避免把 SKILL.md / recon-pipeline.py 等架构讨论路径误判成目标。
 URL_PATTERNS = re.compile(
-    r'https?://[^\s]+|\b[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.[a-zA-Z]{2,}(?:/[^\s]*)?(?:\s|$)|'
-    r'目标[：:]\s*https?://|target[：:]\s*https?://|域名[：:]|测试[：:]\s*http',
+    r'https?://[^\s]+'
+    r'|(?:目标|target|域名|domain)[：:]\s*\S+'
+    r'|测试[：:]\s*https?://',
     re.IGNORECASE
 )
 
@@ -163,6 +166,7 @@ SECURITY_PATTERNS = [
     r"密钥",
     r"挖洞", r"挖漏洞", r"漏洞挖掘", r"SRC", r"src", r"赏金", r"漏洞赏金",
     r"补天", r"教育SRC", r"eduSRC",
+    r"授权测试", r"授权评估",
     r"子域名", r"信息搜集", r"信息收集", r"资产", r"侦察",
     r"越权", r"IDOR", r"idor",
     r"弱口令", r"爆破", r"暴力破解",
@@ -182,7 +186,8 @@ SCENE_PATTERNS = {
             r"SRC", r"src", r"赏金", r"漏洞赏金", r"补天", r"教育SRC"],
     "pentest": [r"渗透", r"\bpentest\b", r"靶场", r"红队", r"提权", r"privilege\s*escalation",
                 r"后渗透", r"横向", r"域控", r"domain\s*controller", r"\bactive directory\b",
-                r"内网", r"域渗透", r"信息搜集", r"信息收集", r"侦察", r"子域名"],
+                r"内网", r"域渗透", r"信息搜集", r"信息收集", r"侦察", r"子域名",
+                r"授权测试", r"授权评估"],
     "tool": [r"扫描器", r"\bscanner\b", r"\bfuzzer\b", r"自动化", r"\bpayloads?\b", r"生成器", r"安全工具"],
     "audit": [r"审计", r"\baudit\b", r"代码审计", r"白盒", r"静态分析", r"\bsemgrep\b", r"\bcodeql\b",
              r"源码", r"sql\s*注入", r"sql\s+injection"],
