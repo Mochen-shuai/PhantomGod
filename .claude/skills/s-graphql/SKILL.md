@@ -110,7 +110,7 @@ When you discover a GraphQL endpoint and begin active security testing, ⛔ **MU
 每个单独测试，记入 `{操作: [防护情况, 说明]}`。
 防护情况枚举：`放行` / `过滤` / `替换` / `拦截` / `转义`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **GQL001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **GQL001~003**。
 > ⛔ 不可仅凭 introspection disabled 判安全 — 需继续检测字段建议(field suggestions)、错误消息泄露。
 
 ### Module 2: 关键技巧 (Key Techniques)

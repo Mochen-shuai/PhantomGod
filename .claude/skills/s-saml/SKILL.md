@@ -109,7 +109,7 @@ When you discover a SAML SSO endpoint and begin active security testing, ⛔ **M
 每个单独测试，记入 `{操作: [防护情况, 说明]}`。
 防护情况枚举：`放行` / `过滤` / `替换` / `拦截` / `转义`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **SAML001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **SAML001~003**。
 
 ### Module 2: 关键技巧 (Key Techniques)
 - List 2-4 non-obvious technical details:

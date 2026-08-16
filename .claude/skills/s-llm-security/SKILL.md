@@ -165,7 +165,7 @@ When you discover a potential LLM / AI / Agent security vulnerability and begin 
 
 每个元素单独测试，记入 `filter_probe`：`{符号/关键字:[防护情况∈{过滤,拦截,替换,转义,放行},说明]}`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **LLM001~004**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **LLM001~004**。
 > ⛔ 严禁在 filter_probe 为空时进入 payload 构造。
 > ⛔ 间接注入必须到模型输出/下游动作处验证，不能仅凭 prompt 输入处响应判定。
 

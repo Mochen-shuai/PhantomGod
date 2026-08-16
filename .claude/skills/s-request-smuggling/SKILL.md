@@ -112,7 +112,7 @@ When you discover a potential HTTP Request Smuggling vulnerability and begin act
 
 **禁止**把完整 smuggling payload 当 key。**禁止**在 filter_probe 为空时进入 Module 3。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **SMUG001~004**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **SMUG001~003**。
 > ⛔ 必须先确认前后端存在差异解析，不可仅凭 400 错误判 `tested_not_found`。
 
 ### Module 2: 关键技巧 (Key Techniques)

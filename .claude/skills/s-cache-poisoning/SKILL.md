@@ -109,7 +109,7 @@ When you discover a potential Web Cache Poisoning vulnerability and begin active
 每个 header 单独发送 → 等待缓存 → 不带 header 重新请求 → 检查响应差异。
 记入 `{header: [是否被缓存, 是否反射, 防护情况]}`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **CP001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **CP001~003**。
 > ⛔ 必须验证缓存 HIT（非 MISS），不可仅凭响应差异判 `tested_not_found`。
 
 ### Module 2: 关键技巧 (Key Techniques)

@@ -109,7 +109,7 @@ When you discover a potential Clickjacking or XS-Leaks vulnerability and begin a
 
 每个单独测试，记入 `{操作: [结果, 说明]}`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **CLICK001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **CLICK001~003**。
 > ⛔ 不可仅凭 X-Frame-Options 存在判 `tested_not_found` — CSP frame-ancestors 可与 XFO 共存但不一致。
 
 ### Module 2: 关键技巧 (Key Techniques)

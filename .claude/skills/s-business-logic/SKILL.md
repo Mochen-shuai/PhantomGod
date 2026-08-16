@@ -97,7 +97,7 @@ When you discover a potential business logic vulnerability and begin active test
 梳理业务流程约束条件来源：页面文案（隐性约束如"优惠已过期"）、前端校验代码、报错信息。
 确定测试方向：**导致自身非法获利或他人利益受损**，不测仅导致自身损失的方向。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md`：
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md`：
 > 竞态 **RACE001~003**、重放 **REPLAY001**、优惠复用 **PRIZE001**、验证码绕过 **SMS001~002**、用户枚举 **ENUM001~002**。
 
 ### Module 1: 测试思路 (Testing Approach)

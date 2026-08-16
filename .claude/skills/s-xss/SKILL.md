@@ -128,7 +128,7 @@ When you discover a potential Cross-Site Scripting (XSS) vulnerability and begin
 
 在正常参数值中间插入单一标签/事件/协议测试防护：`<img` `<svg` `<script` `onerror` `onload` `javascript:` `data:`。每个元素单独测试，记入 `filter_probe`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **XSS001~002**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **XSS001~003**。
 > ⛔ 存储型必须到实际渲染页验证执行。⛔ 不因个别标签被拦即判安全。
 
 ### Module 2: 关键技巧 (Key Techniques)

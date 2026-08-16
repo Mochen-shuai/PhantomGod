@@ -108,7 +108,7 @@ When you discover a WebSocket endpoint and begin active security testing, ⛔ **
 每个单独测试，记入 `{操作: [防护情况, 说明]}`。
 防护情况枚举：`放行` / `过滤` / `替换` / `拦截` / `转义`。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **WS001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **WS001~003**。
 > ⛔ 必须先确认 Origin 检查缺失（CSWSH 的前提），再进入注入测试。
 
 ### Module 2: 关键技巧 (Key Techniques)

@@ -115,7 +115,7 @@ When you discover a potential Deserialization vulnerability and begin active tes
 
 **禁止**把完整 gadget chain 当 key。**禁止**在 filter_probe 为空时进入 Module 3。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **DESER001~004**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **DESER001~003**。
 > `tested_not_found` / `doubtful` / `filtered` 时**必须逐条应答** checkpoint_response。
 
 ### Module 2: 关键技巧 (Key Techniques)

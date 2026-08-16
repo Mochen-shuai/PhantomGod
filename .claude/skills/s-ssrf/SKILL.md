@@ -110,7 +110,7 @@ When you discover a potential Server-Side Request Forgery (SSRF) vulnerability a
 
 在正常URL值中段注入协议/地址测试防护：`file://` `gopher://` `dict://` `127.0.0.1` `169.254.169.254` `@`。每个单独测试。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **SSRF001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **SSRF001~003**。
 > ⛔ 必须构造内网/云元数据探测 + 至少3种协议混淆。⛔ 无回显不得直接判 `tested_not_found`。
 
 ### Module 2: 关键技巧 (Key Techniques)

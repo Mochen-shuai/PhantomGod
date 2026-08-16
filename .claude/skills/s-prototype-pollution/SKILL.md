@@ -114,7 +114,7 @@ When you discover a potential Prototype Pollution vulnerability and begin active
 
 **禁止**把完整 exploit chain 当 key。**禁止**在 filter_probe 为空时进入 Module 3。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **PROTO001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **PROTO001~003**。
 > ⛔ 必须执行 `{} === Object.prototype` 污染验证，不可仅凭 parse 错误判 `tested_not_found`。
 
 ### Module 2: 关键技巧 (Key Techniques)

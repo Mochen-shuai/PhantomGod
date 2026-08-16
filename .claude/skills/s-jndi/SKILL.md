@@ -113,7 +113,7 @@ When you discover a potential JNDI injection or Java framework vulnerability and
 
 **禁止**在未确认回调前启动 LDAP/RMI 服务发送恶意 class。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **JNDI001~004**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **JNDI001~003**。
 > ⛔ Java 版本 ≥ 8u191 时 `trustURLCodebase` 默认 false → 无法直接远程加载 class，必须改用反序列化 gadget 或本地 classpath 类。
 
 ### Module 2: 关键技巧 (Key Techniques)

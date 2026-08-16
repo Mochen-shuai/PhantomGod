@@ -125,7 +125,7 @@ When you discover a potential File Upload vulnerability and begin active testing
 
 探测上传校验规则：后缀白/黑名单、Content-Type校验、魔术字节检查、文件大小限制。逐个测试。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **UPLOAD001~002**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **UPLOAD001~002**。
 > ⛔ 必须遍历所有可解析后缀 + 大小写/双扩展/截断/多MIME。⛔ 上传成功不解析时联动路径穿越。
 
 ### Module 2: 关键技巧 (Key Techniques)

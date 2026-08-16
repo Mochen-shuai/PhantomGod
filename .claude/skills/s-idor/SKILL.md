@@ -73,7 +73,7 @@ When you discover a potential IDOR vulnerability and begin active testing, ⛔ *
 
 越权测试前**必须**正向确认会话有效：用该会话访问本角色专属页面，确认返回本人数据。**防会话失效被重定向到登录页冒充"权限拦截"**。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **AUTHZ001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **AUTHZ001~003**。
 > ⛔ 遇302必须跟踪跳转。⛔ 越权成立须以读到他人真实数据坐实。⛔ 不能仅凭状态码差异判定。
 
 ### Module 2: 关键技巧 (Key Techniques)

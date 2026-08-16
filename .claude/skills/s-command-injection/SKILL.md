@@ -115,7 +115,7 @@ When you discover a potential Command Injection vulnerability and begin active t
 
 探测命令分隔符：`;` `|` `||` `&&` `$()` `` ` `` `%0a` `%0d`。每个单独测试，记入 filter_probe。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **CMDI001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **CMDI001~003**。
 > ⛔ 无回显必须做带外/时延验证。⛔ 遇过滤至少尝试3种绕过（命令替换/IFS空格/引号拼接/编码）。
 
 ### Module 2: 关键技巧 (Key Techniques)

@@ -130,7 +130,7 @@ When you discover a potential Path Traversal or File Inclusion vulnerability and
 
 探测穿越序列：`../` `..\` `..%2f` `..%252f` `%2e%2e/` `....//`，中段注入，记 filter_probe。
 
-> 编号化测试要点见 `knowledge/test-checkpoints.md` — **PATH001~003**。
+> 编号化测试要点见 `../pentest-windftsy/references/test-checkpoints.md` — **PATH001~003**。
 > ⛔ 必须以已知文件（/etc/passwd, win.ini）坐实。⛔ 遇过滤至少3种绕过。
 
 ### Module 2: 关键技巧 (Key Techniques)
